@@ -165,6 +165,7 @@ button:active {
 }
 
 .book-shelf-changer {
+  cursor: pointer;
   position: absolute;
   right: 0;
   bottom: -10px;
