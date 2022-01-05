@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import BookCard from './book-card-component/BookCard';
 
 class BookShelf extends Component {
+
+    handleShelfChange = () => {
+        this.props.refresh();
+    }
     render() {
         return (
             <div className="bookshelf">
@@ -12,7 +16,7 @@ class BookShelf extends Component {
                             this.props.books.map(book => {
                                 return (
                                     <li key={book.id}>
-                                        <BookCard book={book} />
+                                        <BookCard book={book} shelf={this.handleShelfChange} />
                                     </li>
                                 )
                             })

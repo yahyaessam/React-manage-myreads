@@ -13,13 +13,22 @@ class Home extends Component {
     state = {
         books: []
     }
+    getAllBooks = () => {
+        BooksAPI.getAll().then((books) => {
+            this.setState(() => {
+                return (
+                    { books: books })
+            }
+            )
+            localStorage.setItem('books', JSON.stringify(books));
+        })
+    }
+    componentDidMount = () => {
+        this.getAllBooks();
 
-    componentDidMount() {
-
-        BooksAPI.getAll().then((books) => this.setState(() => {
-            return (
-                { books: books })
-        }))
+    }
+    handleRefresh = () => {
+        this.getAllBooks()
     }
     render() {
         return (
@@ -32,7 +41,7 @@ class Home extends Component {
                                 return (
                                     <BookShelf key={shelf.id} title={shelf.title} books={this.state.books.filter(book => {
                                         return book.shelf === shelf.id
-                                    })} />
+                                    })} refresh={this.handleRefresh} />
                                 )
                             })}
                         </div>
