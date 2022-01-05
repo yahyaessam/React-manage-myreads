@@ -196,3 +196,13 @@ button:active {
   text-align: center;
   font-size: 0.8em;
 }
+
+
+.selected-shelf-mark {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url('./icons/check-mark.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
