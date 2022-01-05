@@ -1,3 +1,4 @@
+
 .book-menu {
     position:absolute;
     background-color:#fff;
@@ -20,9 +21,20 @@ p.move-to-text {
 }
 .book-menu-item {
     font-size: 13px;
-    padding:3px 5px;
+    padding:3px 5px 3px 17px;
     cursor:pointer;
+    position:relative;
  
+}
+.book-menu-item.selected {
+    background-color:#eee;
+}
+.book-menu-item.selected::before {
+    content:url('../../../../icons/check-mark.svg');
+    position:absolute;
+    top:6px;
+    left:2px;
+    
 }
 .book-menu-item:hover {
     background-color:#eee;

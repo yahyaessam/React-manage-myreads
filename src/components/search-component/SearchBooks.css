@@ -1,3 +1,6 @@
 .close-search {
     cursor:pointer;
 }
+.display-none {
+    display: none !important;
+}
