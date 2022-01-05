@@ -1,0 +1,30 @@
+.book-menu {
+    position:absolute;
+    background-color:#fff;
+    padding:5px 0;
+    width:145px;
+    top:20px;
+    left:20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius:8px;
+    z-index: 10;
+}
+p.move-to-text {
+    margin:0;
+    padding-left:5px;
+    padding-bottom:5px;
+    margin-bottom:5px;
+    font-size:15px;
+    color:#999;
+    border-bottom:1px solid rgba(0, 0, 0, 0.24)
+}
+.book-menu-item {
+    font-size: 13px;
+    padding:3px 5px;
+    cursor:pointer;
+ 
+}
+.book-menu-item:hover {
+    background-color:#eee;
+
+}
