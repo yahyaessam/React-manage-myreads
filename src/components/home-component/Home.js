@@ -16,16 +16,15 @@ class Home extends Component {
 
     componentDidMount() {
 
-        BooksAPI.getAll().then((books) => this.setState(() =>{
-            return(
-                { books: books})
+        BooksAPI.getAll().then((books) => this.setState(() => {
+            return (
+                { books: books })
         }))
     }
     render() {
         return (
             (
                 <div className="list-books">
-
                     <Header />
                     <div className="list-books-content">
                         <div>
@@ -44,8 +43,6 @@ class Home extends Component {
                             <button>Search a book</button>
                         </Link>
                     </div>
-
-
                 </div>
             )
         )
