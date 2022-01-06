@@ -9,7 +9,8 @@
     "react-dom": "next",
     "react-loading-overlay": "^1.0.1",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "react-scroll": "^1.8.4"
   },
   "scripts": {
     "start": "react-scripts start",
