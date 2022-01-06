@@ -57,7 +57,7 @@ class Home extends Component {
                             </div>
                         </div>
 
-                        <div className="open-search">
+                        <div className="open-search" title="koko">
                             <Link to="/search">
                                 <button>Search a book</button>
                             </Link>
