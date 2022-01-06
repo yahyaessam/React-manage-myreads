@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import BookCard from './book-card-component/BookCard';
-
+import './BookShelf.css';
 class BookShelf extends Component {
 
     handleShelfChange = () => {

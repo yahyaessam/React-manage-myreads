@@ -2,26 +2,25 @@
 .book-menu {
     position:absolute;
     background-color:#fff;
-    padding:5px 0;
+    padding:0 0 5px 0;
     width:145px;
     top:20px;
-    left:20px;
+    right:20px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius:8px;
     z-index: 10;
 }
 p.move-to-text {
     margin:0;
-    padding-left:5px;
-    padding-bottom:5px;
-    margin-bottom:5px;
-    font-size:15px;
+    padding-left:10px;
+    padding-bottom:0;
+    margin-bottom:3px;
+    font-size:12px;
     color:#999;
     border-bottom:1px solid rgba(0, 0, 0, 0.24)
 }
 .book-menu-item {
-    font-size: 13px;
-    padding:3px 5px 3px 17px;
+    font-size: 12px;
+    padding:4px 5px 4px 25px;
     cursor:pointer;
     position:relative;
  
@@ -33,10 +32,34 @@ p.move-to-text {
     content:url('../../../../icons/check-mark.svg');
     position:absolute;
     top:6px;
-    left:2px;
+    left:5px;
     
 }
 .book-menu-item:hover {
     background-color:#eee;
 
+}
+
+.book {
+    width: 300px !important;
+    display: flex;
+    background-color:rgb(245, 244, 244);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.book-right {
+    margin-right:15px;
+    position:relative;
+}
+.book-left {
+    padding-top:15px;
+    position:relative;
+    width:100%;
+}
+.books-grid li {
+    padding-top:15px !important;
+    padding-bottom:15px !important;
+}
+.MuiRating-root {
+    position:absolute !important;
+    bottom:25px;
 }
