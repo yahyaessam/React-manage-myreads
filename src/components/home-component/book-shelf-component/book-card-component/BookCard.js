@@ -79,7 +79,7 @@ class BookCard extends Component {
                         }
                     </div>
                     <BookRating bookId={this.props.book.id} rate={
-                        JSON.parse(localStorage.getItem('rating')).find(book => book.id === this.props.book.id ) ? 
+                        localStorage.getItem('rating') &&JSON.parse(localStorage.getItem('rating')).find(book => book.id === this.props.book.id ) ? 
                         JSON.parse(localStorage.getItem('rating')).find(book => book.id === this.props.book.id ).rate: 0
                         } />
                 </div>
