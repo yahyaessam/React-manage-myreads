@@ -31,6 +31,7 @@ class BookCard extends Component {
         }))
     }
     selectShelf = (shelf, book) => {
+        debugger;
         BooksApi.update(book, shelf).then(data => {
             this.setState({ selected: shelf });
             this.props.shelf();
@@ -58,7 +59,7 @@ class BookCard extends Component {
         return (
             <div className="book">
                 <div className="book-right">
-                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${this.props.book.imageLinks.thumbnail} )` }}></div>
+                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${this.props.book.imageLinks ? this.props.book.imageLinks.thumbnail: ''} )` }}></div>
 
                 </div>
                 <div className='book-left'>
@@ -77,7 +78,10 @@ class BookCard extends Component {
                             ) : ''
                         }
                     </div>
-                    <BookRating bookId={this.props.book.id} />
+                    <BookRating bookId={this.props.book.id} rate={
+                        localStorage.getItem('rating') &&JSON.parse(localStorage.getItem('rating')).find(book => book.id === this.props.book.id ) ? 
+                        JSON.parse(localStorage.getItem('rating')).find(book => book.id === this.props.book.id ).rate: 0
+                        } />
                 </div>
 
             </div>
