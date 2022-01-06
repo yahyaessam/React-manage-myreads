@@ -4,3 +4,6 @@
 .display-none {
     display: none !important;
 }
+.search-books-results {
+    min-height:100vh;
+}

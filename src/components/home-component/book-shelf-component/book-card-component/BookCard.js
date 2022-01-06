@@ -1,17 +1,29 @@
 import './BookCard.css';
 import React, { Component } from 'react';
 import * as BooksApi from '../../../../BooksAPI';
+import BookRating from './book-rating-component/BookRating';
 
 
 class BookCard extends Component {
     state = {
         showMenu: false,
-        selected: this.props.book.shelf
+        selected: this.props.book.shelf,
+        ratingValue: 0,
+        name: this.props.book.id,
+        // updateRatingValue:(newValue) => this.setState({ratingValue:newValue})
     }
     constructor(props) {
         super(props);
         this.ref = React.createRef();
 
+    }
+    updateRatingValue = (newValue) => {
+        this.setState({ratingValue: newValue})
+        console.log(this.state.ratingValue)
+    }
+    setHover(newValue) {
+        // console.log('hover', newValue)
+        // console.log(this.state.ratingValue)
     }
     toggleShowMenu = () => {
         this.setState((current) => ({
@@ -45,8 +57,13 @@ class BookCard extends Component {
     render() {
         return (
             <div className="book">
-                <div className="book-top">
+                <div className="book-right">
                     <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url(${this.props.book.imageLinks.thumbnail} )` }}></div>
+
+                </div>
+                <div className='book-left'>
+                    <div className="book-title">{this.props.book.title} </div>
+                    <div className="book-authors">By: {this.props.book.authors ? this.props.book.authors.map(author => (<span key={author}>{author + ', '}</span>)) : ''}</div>
                     <div ref={this.ref} className="book-shelf-changer" onClick={this.toggleShowMenu}>
                         {
                             this.state.showMenu ? (
@@ -60,9 +77,9 @@ class BookCard extends Component {
                             ) : ''
                         }
                     </div>
+                    <BookRating bookId={this.props.book.id} />
                 </div>
-                <div className="book-title">{this.props.book.title} </div>
-                <div className="book-authors">By: {this.props.book.authors? this.props.book.authors.map(author => (<span key={author}>{author + ', '}</span>)) : ''}</div>
+
             </div>
 
         )
