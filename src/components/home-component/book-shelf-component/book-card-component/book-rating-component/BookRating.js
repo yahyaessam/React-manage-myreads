@@ -1,24 +1,38 @@
 import React from "react";
-import Rating from '@material-ui/lab/Rating';
-
+import './BookRating.css';
 function BookRating(props) {
-    const [value, setValue] = React.useState(0);
-    // const [hover, setHover] = React.useState(-1);
-    return (
-        <Rating
-            value={value}
-            precision={0.5}
-            max={5}
-            name={`unique-rating ${props.bookId}`}
-            onChange={(event, newValue) => {
-                console.log(1)
-                setValue(newValue);
-            }}
-            // onChangeActive={(event, newHover) => {
-            //     setHover(newHover);
-            // }}
+    const rate = props.rate;
+    const [rating, setRating] = React.useState(rate);
 
-        />
+    return (
+        <div className="star-rating">
+            {[...Array(5)].map((star, index) => {
+                index += 1;
+                return (
+                    <button
+                        type="button"
+                        key={index}
+                        className={index <= rating ? "on" : "off"}
+                        onClick={() => {
+                            setRating(index);
+                            let ratingRecord = { id: props.bookId, rate: index };
+                            let rating = [];
+                            rating.push(ratingRecord);
+                            if (!localStorage.getItem('rating')) {
+                                localStorage.setItem('rating', JSON.stringify(rating));
+                            } else {
+                                let currentRating = JSON.parse(localStorage.getItem('rating'));
+                                currentRating.push(ratingRecord);
+                                localStorage.setItem('rating', JSON.stringify(currentRating));
+                            }
+
+                        }}
+                    >
+                        <span className="star">&#9733;</span>
+                    </button>
+                );
+            })}
+        </div>
     )
 }
 export default BookRating;
