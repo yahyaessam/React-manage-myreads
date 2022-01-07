@@ -17,15 +17,15 @@
 
 #### pages
 * Main page
- - contains three shelves ( categories ) of books 
-   * Currently reading
-   * Want to Read
-   * Read
+  - contains three shelves ( categories ) of books 
+     * Currently reading
+     * Want to Read
+     * Read
 
 * Search Page
- - contains:
-   * Search Input
-   * Search Result View
+  - contains:
+     * Search Input
+     * Search Result View
 
 ## Components Structure
 ```
