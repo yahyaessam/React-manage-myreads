@@ -16,7 +16,6 @@ class BooksApp extends React.Component {
     this.myRef = React.createRef();
   }
   selectBookEvent = (e, afterMove) => {
-    debugger;
     this.setState({ selectBook: e });
     const location = window.location;
     if(afterMove === 'afterMove' && location.pathname !== "/search") this.myRef.current.getAllBooks()

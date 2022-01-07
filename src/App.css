@@ -4,7 +4,7 @@ html, body, .root {
 
 body {
   line-height: 1.5;
-  padding-top:55px !important;
+  padding-top: 50px !important;
 }
 
 body, .app {
@@ -15,9 +15,8 @@ body, .app {
 
 .list-books-title {
   padding: 10px 0;
-  /* background: #009eef; */
   background: rgb(19, 0, 36);
-  background: linear-gradient(90deg, rgba(19, 0, 36, 1) 0%, rgba(0, 158, 239, 1) 39%, rgba(0, 212, 255, 1) 100%);
+  background: linear-gradient( 292deg ,#0d47a1 ,#42a5f5);
   text-align: center;
 }
 
