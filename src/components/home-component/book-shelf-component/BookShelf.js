@@ -6,6 +6,9 @@ class BookShelf extends Component {
     handleShelfChange = () => {
         this.props.refresh();
     }
+    handleSelectBook = (e) => {
+        this.props.selectBook(e);
+    }
     render() {
         return (
             <div className="bookshelf" id={(this.props.title).replace(/\s+/g, '')}>
@@ -16,7 +19,7 @@ class BookShelf extends Component {
                             this.props.books.map(book => {
                                 return (
                                     <li key={book.id}>
-                                        <BookCard book={book} shelf={this.handleShelfChange} />
+                                        <BookCard book={book} shelf={this.handleShelfChange} selectBook={(e) =>this.handleSelectBook(e)} />
                                     </li>
                                 )
                             })

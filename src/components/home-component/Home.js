@@ -17,20 +17,30 @@ class Home extends Component {
     }
     getAllBooks = () => {
         BooksAPI.getAll().then((books) => {
-            this.setState(() => {
-                return (
-                    { books: books })
-            }
-            )
-            localStorage.setItem('books', JSON.stringify(books));
+            this.setState((prevState) => {
+                if (JSON.stringify(prevState.books) === JSON.stringify(books)) {
+                    return {books: []}
+                }
+            })
+            // this.setState({books: []})
+            setTimeout(() => {
+                this.setState(() => {
+                    return (
+                        { books: books })
+                })
+                localStorage.setItem('books', JSON.stringify(books));
+            }, 0)
+            
         })
     }
     componentDidMount = () => {
         this.getAllBooks();
-
     }
     handleRefresh = () => {
         this.getAllBooks()
+    }
+    handleSelectBook = (e) => {
+        this.props.selectBookEvent(e)
     }
     render() {
         return (
@@ -47,11 +57,9 @@ class Home extends Component {
                                 {this.bookShelves.map(shelf => {
                                     return (
                                         this.state.books.length > 0 ?
-                                        <BookShelf key={shelf.id} title={shelf.title} books={this.state.books.filter(book => {
-                                            return book.shelf === shelf.id
-                                        })} refresh={this.handleRefresh} /> : ''
-
-
+                                            <BookShelf key={shelf.id} title={shelf.title} books={this.state.books.filter(book => {
+                                                return book.shelf === shelf.id
+                                            })} refresh={this.handleRefresh} selectBook={this.handleSelectBook} /> : ''
                                     )
                                 })}
                             </div>
@@ -63,6 +71,7 @@ class Home extends Component {
                             </Link>
                         </div>
                     </div>
+
                 </LoadingOverlay>
             )
         )
