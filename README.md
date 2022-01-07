@@ -1,31 +1,31 @@
 # MyReads Project ( React )
 ## Project Description
 
-### project to manage your Reads which you can:
+### Project to manage your Reads which you can:
 * Search For Books
 * Add ( Single or Bulk ) Book/s to your categories
 * Categories are ( Currenly Reading - Want to Raed - Read)
 * Remove Books from your Categories
 * Rate your favorite books
 
-Start Project Locally:
+### Start Project Locally:
 
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
 
 ## Project Content
 
-#pages
+#### pages
 * Main page
--- contains three shelves ( categories ) of books 
-** Currently reading
-** Want to Read
-** Read
+ - contains three shelves ( categories ) of books 
+   * Currently reading
+   * Want to Read
+   * Read
 
 * Search Page
--- contains:
-** Search Input
-** Search Result View
+ - contains:
+   * Search Input
+   * Search Result View
 
 ## Components Structure
 ```
