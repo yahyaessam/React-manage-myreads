@@ -1,7 +1,7 @@
 
 .list-books-title {
     position:relative;
-    height:95px;
+    height:80px;
     position: fixed;
     top:0;
     width:100%;
@@ -15,7 +15,7 @@
     height:100%;
     display: inline-block;
     width:50%;
-    padding-top:15px;
+    padding-top:13px;
     text-align:left;
     padding-left:45px;
 }
@@ -31,7 +31,7 @@
 }
 .smooth-link {
     display: inline-block;
-    margin-top:30px;
+    margin-top: 21px;
     color:#e7e7e7;
     padding:5px 15px;
     cursor: pointer;
@@ -39,5 +39,5 @@
 
 }
 .smooth-link:hover, .smooth-link.active  {
-    color:#333
+    color:#333;
 }

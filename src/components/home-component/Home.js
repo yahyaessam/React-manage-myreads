@@ -13,26 +13,29 @@ class Home extends Component {
     ]
 
     state = {
-        books: []
+        books: [],
+        key: Math.random()
     }
     getAllBooks = () => {
         BooksAPI.getAll().then((books) => {
-            this.setState(() => {
+            this.setState((prev) => {
                 return (
                     { books: books })
-            }
-            )
+            })
             localStorage.setItem('books', JSON.stringify(books));
         })
     }
     componentDidMount = () => {
         this.getAllBooks();
-
     }
     handleRefresh = () => {
         this.getAllBooks()
     }
+    handleSelectBook = (e) => {
+        this.props.selectBookEvent(e)
+    }
     render() {
+        console.log('Render Home')
         return (
             (
                 <LoadingOverlay
@@ -47,11 +50,9 @@ class Home extends Component {
                                 {this.bookShelves.map(shelf => {
                                     return (
                                         this.state.books.length > 0 ?
-                                        <BookShelf key={shelf.id} title={shelf.title} books={this.state.books.filter(book => {
-                                            return book.shelf === shelf.id
-                                        })} refresh={this.handleRefresh} /> : ''
-
-
+                                            <BookShelf key={shelf.id} title={shelf.title} books={this.state.books.filter(book => {
+                                                return book.shelf === shelf.id
+                                            })} refresh={this.handleRefresh} selectBook={this.handleSelectBook} /> : ''
                                     )
                                 })}
                             </div>
@@ -63,6 +64,7 @@ class Home extends Component {
                             </Link>
                         </div>
                     </div>
+
                 </LoadingOverlay>
             )
         )

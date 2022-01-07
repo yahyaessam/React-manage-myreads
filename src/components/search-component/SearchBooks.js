@@ -49,6 +49,9 @@ class SearchBooks extends Component {
     });
 
   }
+  handleSelectBook = (e) => {
+    this.props.selectBook(e);
+}
   render() {
     return (
       <div className="search-books">
@@ -70,7 +73,7 @@ class SearchBooks extends Component {
             <ol className={`books-grid ${this.state.query === '' ? 'display-none' : ''}`} >
               {
                 (this.state.books && this.state.books.length > 0) ?
-                  this.state.books.map(book => <li key={book.id}><BookCard book={book} shelf={this.handleShelfChange} /></li>) :
+                  this.state.books.map(book => <li key={book.id}><BookCard book={book} shelf={this.handleShelfChange} selectBook={(e) =>this.handleSelectBook(e)} /></li>) :
                   <p >No results found. Please refine your search</p>
               }
             </ol>
