@@ -24,6 +24,7 @@ body, .app {
   font-weight: 400;
   margin: 0;
   color: white;
+  font-weight: bold;
 }
 
 .list-books-content {
