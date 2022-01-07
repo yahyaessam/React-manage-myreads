@@ -1,8 +1,8 @@
 import React from 'react';
-import SearchBooks from './components/search-component/SearchBooks';
-import Home from './components/home-component/Home';
+import SearchBooks from './components/search/SearchBooks';
+import Home from './components/home/Home';
 import { Routes, Route } from 'react-router-dom';
-import BucketComponent from './components/bucket-component/BucketComponent';
+import BucketComponent from './components/bucket/BucketComponent';
 import './App.css';
 
 

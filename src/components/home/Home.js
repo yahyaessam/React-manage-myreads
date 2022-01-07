@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import LoadingOverlay from 'react-loading-overlay';
 import { Link } from 'react-router-dom';
-import BookShelf from './book-shelf-component/BookShelf';
-import Header from './header-nav-component/Header';
+import BookShelf from './book-shelf/BookShelf';
+import Header from './header-nav/Header';
 import * as BooksAPI from '../../BooksAPI';
 import './Home.css';
 class Home extends Component {

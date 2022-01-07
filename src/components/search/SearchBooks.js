@@ -2,7 +2,7 @@ import './SearchBooks.css';
 import LoadingOverlay from 'react-loading-overlay';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import BookCard from '../home-component/book-shelf-component/book-card-component/BookCard';
+import BookCard from '../home/book-shelf/book-card/BookCard';
 import * as BooksApI from '../../BooksAPI';
 
 class SearchBooks extends Component {

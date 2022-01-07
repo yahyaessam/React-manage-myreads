@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BookCard from './book-card-component/BookCard';
+import BookCard from './book-card/BookCard';
 import './BookShelf.css';
 class BookShelf extends Component {
 

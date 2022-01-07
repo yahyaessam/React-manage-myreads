@@ -1,7 +1,7 @@
 import './BookCard.css';
 import React, { Component } from 'react';
 import * as BooksApi from '../../../../BooksAPI';
-import BookRating from './book-rating-component/BookRating';
+import BookRating from './book-rating/BookRating';
 
 
 class BookCard extends Component {
