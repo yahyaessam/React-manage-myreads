@@ -6,12 +6,19 @@
     left: calc(50% - 25vw);
     bottom: 50px;
     padding: 15px;
+    height:60px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .move-all {
-    display: inline-block;
-    color: #999;
+    position:absolute;
+    color: #fff;
+    top:0;
+    left:0;
+    padding:18px 20px;
+    background-color: #111;
+    margin:0 !important;
+    font-weight:bold;
 }
 
 .btns-container {
@@ -49,5 +56,5 @@
     cursor: pointer;
     position:absolute;
     right:20px;
-    top:34px;
+    top:23px;
 }

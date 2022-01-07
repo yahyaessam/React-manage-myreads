@@ -42,6 +42,15 @@ body, .app {
     padding: 0 20px 40px;
   }
 }
+@media (max-width: 1120px) {
+  .cat-name-button {
+    font-size:14px;
+  }
+  .move-all {
+    padding: 20px 20px;
+    font-size: 14px;
+  }
+}
 @media (max-width: 900px) {
   .smooth-link {
     font-size:13px;
@@ -66,11 +75,12 @@ body, .app {
   }
   .move-all {
     font-size:12px;
+    padding: 21px 20px;
   }
   .remove-all {
     width:15px;
     height:15px;
-    top:30px;
+    top: 23px;
   }
 }
 
