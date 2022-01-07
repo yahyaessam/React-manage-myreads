@@ -27,7 +27,7 @@ class BooksApp extends React.Component {
       <div  className="app"  >
         <span className='test' ></span>
         <Routes>
-          <Route path="/" element={<Home selectBookEvent={(e) => this.selectBookEvent(e)} ref={this.myRef} />} />
+          <Route exact path="/" element={<Home selectBookEvent={(e) => this.selectBookEvent(e)} ref={this.myRef} />} />
           <Route path="/search" element={<SearchBooks selectBook={(e) => this.selectBookEvent(e)} />} />
         </Routes>
         <BucketComponent select={this.state.selectBook} afterMove={(e) => this.selectBookEvent(false, 'afterMove')} />

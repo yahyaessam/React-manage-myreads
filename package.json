@@ -2,7 +2,7 @@
   "name": "myreads-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://yahyaessam.github.io/",
+  "homepage": "https://yahyaessam.github.io/react-project-myreads/",
   "dependencies": {
     "history": "^5.2.0",
     "prop-types": "^15.6.2",
