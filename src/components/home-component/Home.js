@@ -11,7 +11,6 @@ class Home extends Component {
         { id: 'wantToRead', title: 'Want to Read' },
         { id: 'read', title: 'Read' }
     ]
-
     state = {
         books: []
     }
@@ -30,7 +29,6 @@ class Home extends Component {
                 })
                 localStorage.setItem('books', JSON.stringify(books));
             }, 0)
-            
         })
     }
     componentDidMount = () => {
