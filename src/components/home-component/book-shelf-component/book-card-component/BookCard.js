@@ -8,7 +8,6 @@ class BookCard extends Component {
     state = {
         showMenu: false,
         selected: this.props.book.shelf,
-        ratingValue: 0,
         name: this.props.book.id,
         showCheckBox: false,
         bookSelected: false
@@ -18,10 +17,6 @@ class BookCard extends Component {
         this.ref = React.createRef();
 
     }
-    updateRatingValue = (newValue) => {
-        this.setState({ ratingValue: newValue })
-    }
-
     toggleShowMenu = () => {
         this.setState((current) => ({
             showMenu: !current.showMenu
@@ -57,10 +52,8 @@ class BookCard extends Component {
         this.setState({ bookSelected: e.target.checked });
         this.props.selectBook(e.target.checked);
         let currentStorage = JSON.parse(localStorage.getItem('selectedBooks'));
-
         if (e.target.checked && !currentStorage) {
-            let arr = [];
-            arr.push(this.props.book.id);
+            let arr = [this.props.book.id];
             localStorage.setItem('selectedBooks', JSON.stringify(arr));
         } else if (e.target.checked && currentStorage) {
             currentStorage.push(this.props.book.id);

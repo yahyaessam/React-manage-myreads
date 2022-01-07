@@ -10,7 +10,6 @@ class BookShelf extends Component {
         this.props.selectBook(e);
     }
     render() {
-        console.log('Render BookShelf')
         return (
             <div className="bookshelf" id={(this.props.title).replace(/\s+/g, '')}>
                 <h2 className="bookshelf-title">{this.props.title}</h2>

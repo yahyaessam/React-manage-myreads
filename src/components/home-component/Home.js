@@ -13,16 +13,24 @@ class Home extends Component {
     ]
 
     state = {
-        books: [],
-        key: Math.random()
+        books: []
     }
     getAllBooks = () => {
         BooksAPI.getAll().then((books) => {
-            this.setState((prev) => {
-                return (
-                    { books: books })
+            this.setState((prevState) => {
+                if (JSON.stringify(prevState.books) === JSON.stringify(books)) {
+                    return {books: []}
+                }
             })
-            localStorage.setItem('books', JSON.stringify(books));
+            // this.setState({books: []})
+            setTimeout(() => {
+                this.setState(() => {
+                    return (
+                        { books: books })
+                })
+                localStorage.setItem('books', JSON.stringify(books));
+            }, 0)
+            
         })
     }
     componentDidMount = () => {
@@ -35,7 +43,6 @@ class Home extends Component {
         this.props.selectBookEvent(e)
     }
     render() {
-        console.log('Render Home')
         return (
             (
                 <LoadingOverlay

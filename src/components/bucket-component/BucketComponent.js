@@ -5,7 +5,6 @@ class BucketComponent extends Component {
 
     moveAll = async (shelf) => {
         let currentSelectedBooks = JSON.parse(localStorage.getItem('selectedBooks'));
-        console.log(currentSelectedBooks)
         let requests = currentSelectedBooks.map(BookId => {
             return new Promise((resolve, reject) => {
                 BookAPI.updateById(BookId, shelf).then(data => resolve(data));
@@ -19,9 +18,7 @@ class BucketComponent extends Component {
     }
     unselectAll = () => {
         localStorage.removeItem('selectedBooks');
-        localStorage.setItem('selectedBooks', JSON.stringify([]))
         this.props.afterMove();
-        window.location.reload()
     }
     render() {
         return (
