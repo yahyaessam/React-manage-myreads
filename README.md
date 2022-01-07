@@ -1,7 +1,7 @@
 # MyReads Project ( React )
 ## Project Description
 
-## manage Reads
+### project to manage your Reads which you can:
 * Search For Books
 * Add ( Single or Bulk ) Book/s to your categories
 * Categories are ( Currenly Reading - Want to Raed - Read)
