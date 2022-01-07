@@ -32,12 +32,12 @@
 .smooth-link {
     display: inline-block;
     margin-top: 21px;
-    color:#e7e7e7;
+    color:#fff;
     padding:5px 15px;
     cursor: pointer;
     transition: all .2s ease-in-out;
 
 }
 .smooth-link:hover, .smooth-link.active  {
-    color:#333;
+    color:#e7e7e7;
 }
