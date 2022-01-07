@@ -42,6 +42,37 @@ body, .app {
     padding: 0 20px 40px;
   }
 }
+@media (max-width: 900px) {
+  .smooth-link {
+    font-size:13px;
+    margin-top:25px;
+  }
+  .list-books-title .left-side h1 {
+    font-size:25px;
+    top:30px;
+  }
+  .left-side {
+    padding-top:17px;
+  }
+  .right-side {
+    padding-right:15px;
+  }
+  .bucket-container {
+    width: 80vw;
+    left: calc(50% - 40vw);
+  }
+  .cat-name-button {
+    font-size:12px;
+  }
+  .move-all {
+    font-size:12px;
+  }
+  .remove-all {
+    width:15px;
+    height:15px;
+    top:30px;
+  }
+}
 
 .bookshelf-title {
   border-bottom: 1px solid #dedede;
