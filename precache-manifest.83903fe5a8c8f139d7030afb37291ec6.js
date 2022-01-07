@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e0ce5328c2780b179fcd",
-    "url": "/react-project-myreads/static/css/main.e043f1f4.chunk.css"
+    "revision": "15b6aac5e983b232ca72",
+    "url": "/react-project-myreads/static/css/main.3bb31727.chunk.css"
   },
   {
-    "revision": "e0ce5328c2780b179fcd",
-    "url": "/react-project-myreads/static/js/main.e0ce5328.chunk.js"
+    "revision": "15b6aac5e983b232ca72",
+    "url": "/react-project-myreads/static/js/main.15b6aac5.chunk.js"
   },
   {
     "revision": "fe3ddac0e04a9f79c44f",
@@ -28,15 +28,15 @@ self.__precacheManifest = [
     "url": "/react-project-myreads/static/media/add.75d390e5.svg"
   },
   {
-    "revision": "20e8847d1eb7759c19b0e30beb8849cf",
-    "url": "/react-project-myreads/static/media/arrow-back.20e8847d.svg"
-  },
-  {
     "revision": "322e6795f4883dda589ad2a618552a4d",
     "url": "/react-project-myreads/static/media/three-dots.322e6795.svg"
   },
   {
-    "revision": "551bcb0f2ac4a882a7ab69eb38369c0d",
+    "revision": "20e8847d1eb7759c19b0e30beb8849cf",
+    "url": "/react-project-myreads/static/media/arrow-back.20e8847d.svg"
+  },
+  {
+    "revision": "5950287f999e35d3780a9f0fad74b04c",
     "url": "/react-project-myreads/index.html"
   }
 ];

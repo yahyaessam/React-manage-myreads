@@ -1,15 +1,15 @@
 {
-  "main.css": "/react-project-myreads/static/css/main.e043f1f4.chunk.css",
-  "main.js": "/react-project-myreads/static/js/main.e0ce5328.chunk.js",
-  "main.js.map": "/react-project-myreads/static/js/main.e0ce5328.chunk.js.map",
+  "main.css": "/react-project-myreads/static/css/main.3bb31727.chunk.css",
+  "main.js": "/react-project-myreads/static/js/main.15b6aac5.chunk.js",
+  "main.js.map": "/react-project-myreads/static/js/main.15b6aac5.chunk.js.map",
   "static/js/1.fe3ddac0.chunk.js": "/react-project-myreads/static/js/1.fe3ddac0.chunk.js",
   "static/js/1.fe3ddac0.chunk.js.map": "/react-project-myreads/static/js/1.fe3ddac0.chunk.js.map",
   "runtime~main.js": "/react-project-myreads/static/js/runtime~main.007d459c.js",
   "runtime~main.js.map": "/react-project-myreads/static/js/runtime~main.007d459c.js.map",
-  "static/media/App.css": "/react-project-myreads/static/media/three-dots.322e6795.svg",
+  "static/media/App.css": "/react-project-myreads/static/media/arrow-back.20e8847d.svg",
   "static/media/BucketComponent.css": "/react-project-myreads/static/media/cancel.6ed01e4c.svg",
-  "static/css/main.e043f1f4.chunk.css.map": "/react-project-myreads/static/css/main.e043f1f4.chunk.css.map",
+  "static/css/main.3bb31727.chunk.css.map": "/react-project-myreads/static/css/main.3bb31727.chunk.css.map",
   "index.html": "/react-project-myreads/index.html",
-  "precache-manifest.b3496523a74ab9a5d97545fa158dcfff.js": "/react-project-myreads/precache-manifest.b3496523a74ab9a5d97545fa158dcfff.js",
+  "precache-manifest.83903fe5a8c8f139d7030afb37291ec6.js": "/react-project-myreads/precache-manifest.83903fe5a8c8f139d7030afb37291ec6.js",
   "service-worker.js": "/react-project-myreads/service-worker.js"
 }
