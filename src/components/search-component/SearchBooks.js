@@ -1,4 +1,5 @@
 import './SearchBooks.css';
+import LoadingOverlay from 'react-loading-overlay';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import BookCard from '../home-component/book-shelf-component/book-card-component/BookCard';
@@ -7,7 +8,8 @@ import * as BooksApI from '../../BooksAPI';
 class SearchBooks extends Component {
   state = {
     books: [],
-    query: ''
+    query: '',
+    spinner: false
   }
   timeout = null;
   onSearch(e) {
@@ -16,6 +18,7 @@ class SearchBooks extends Component {
 
     clearTimeout(this.timeout);
     this.timeout = setTimeout(() => {
+      this.setState({ spinner: true })
       if (e.target.value.trim() !== '') {
         BooksApI.search(searchQuery).then(books => {
           let cleanBooks = Array.isArray(books) &&
@@ -31,9 +34,11 @@ class SearchBooks extends Component {
             })
           }
           this.setState({ books: cleanBooks, query: searchQuery });
+          this.setState({ spinner: false });
         });
       } else {
         this.setState({ books: [], query: '' });
+        this.setState({ spinner: false });
       }
     }, 1000);
   }
@@ -44,6 +49,9 @@ class SearchBooks extends Component {
     });
 
   }
+  handleSelectBook = (e) => {
+    this.props.selectBook(e);
+}
   render() {
     return (
       <div className="search-books">
@@ -57,15 +65,20 @@ class SearchBooks extends Component {
 
           </div>
         </div>
-        <div className="search-books-results">
-          <ol className={`books-grid ${this.state.query === '' ? 'display-none' : ''}`} >
-            {
-              (this.state.books && this.state.books.length > 0) ?
-                this.state.books.map(book => <li key={book.id}><BookCard book={book} shelf={this.handleShelfChange} /></li>) :
-                <p >No results found. Please refine your search</p>
-            }
-          </ol>
-        </div>
+        <LoadingOverlay
+          active={this.state.spinner}
+          spinner
+          text='Loading your content...'>
+          <div className="search-books-results">
+            <ol className={`books-grid ${this.state.query === '' ? 'display-none' : ''}`} >
+              {
+                (this.state.books && this.state.books.length > 0) ?
+                  this.state.books.map(book => <li key={book.id}><BookCard book={book} shelf={this.handleShelfChange} selectBook={(e) =>this.handleSelectBook(e)} /></li>) :
+                  <p >No results found. Please refine your search</p>
+              }
+            </ol>
+          </div>
+        </LoadingOverlay>
       </div>
     )
   }

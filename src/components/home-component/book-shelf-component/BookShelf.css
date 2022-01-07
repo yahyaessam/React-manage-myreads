@@ -1,0 +1,11 @@
+.bookshelf {
+    box-shadow: 0 0 10px 2px rgb(0 0 0 / 18%);
+    margin: 30px 40px;
+    padding-top: 1px;
+}
+.bookshelf:first-of-type {
+    margin-top:50px;
+}
+.bookshelf-title {
+    padding-bottom: 15px;
+}

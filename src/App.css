@@ -4,6 +4,7 @@ html, body, .root {
 
 body {
   line-height: 1.5;
+  padding-top:55px !important;
 }
 
 body, .app {
@@ -14,7 +15,9 @@ body, .app {
 
 .list-books-title {
   padding: 10px 0;
-  background: #2e7c31;
+  /* background: #009eef; */
+  background: rgb(19, 0, 36);
+  background: linear-gradient(90deg, rgba(19, 0, 36, 1) 0%, rgba(0, 158, 239, 1) 39%, rgba(0, 212, 255, 1) 100%);
   text-align: center;
 }
 
@@ -31,6 +34,7 @@ body, .app {
 
 .bookshelf {
   padding: 0 10px 20px;
+  margin-bottom: 60px;
 }
 
 @media (min-width: 600px) {
@@ -41,6 +45,7 @@ body, .app {
 
 .bookshelf-title {
   border-bottom: 1px solid #dedede;
+  padding-top: 15px;
 }
 
 .bookshelf-books {
@@ -51,7 +56,7 @@ body, .app {
   position: fixed;
   right: 25px;
   bottom: 25px;
-  
+
 }
 
 .open-search button {
@@ -59,19 +64,19 @@ body, .app {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: #2e7d32;
+  background: #009eef;
   background-image: url('./icons/add.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 28px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   font-size: 0;
   outline: 0;
   cursor: pointer;
 }
 
 .open-search button:hover {
-  background-color: rgb(0, 102, 0);
+  background-color: rgb(0, 158, 239, .5);
 }
 
 
@@ -84,7 +89,7 @@ body, .app {
   left: 0;
   z-index: 5;
   display: flex;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 0 6px rgba(0,0,0,0.23);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 0 6px rgba(0, 0, 0, 0.23);
 }
 
 .search-books-input-wrapper {
@@ -167,17 +172,16 @@ button:active {
 .book-shelf-changer {
   cursor: pointer;
   position: absolute;
+  top: -5px;
   right: 0;
-  bottom: -10px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: #60ac5d;
-  background-image: url('./icons/arrow-drop-down.svg');
+  background-image: url('./icons/three-dots.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 20px;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
 }
 
 .book-shelf-changer select {
@@ -190,7 +194,7 @@ button:active {
 /* book cover */
 
 .book-cover {
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   background: #eee;
 }
 
@@ -202,10 +206,10 @@ button:active {
 
 
 .selected-shelf-mark {
-    display: block;
-    width: 15px;
-    height: 15px;
-    background-image: url('./icons/check-mark.svg');
-    background-repeat: no-repeat;
-    background-position: center;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url('./icons/check-mark.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
