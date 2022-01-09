@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "/react-project-myreads/static/media/add.75d390e5.svg"
   },
   {
-    "revision": "322e6795f4883dda589ad2a618552a4d",
-    "url": "/react-project-myreads/static/media/three-dots.322e6795.svg"
-  },
-  {
     "revision": "20e8847d1eb7759c19b0e30beb8849cf",
     "url": "/react-project-myreads/static/media/arrow-back.20e8847d.svg"
+  },
+  {
+    "revision": "322e6795f4883dda589ad2a618552a4d",
+    "url": "/react-project-myreads/static/media/three-dots.322e6795.svg"
   },
   {
     "revision": "4fd8af4d50eb5a0c3ac7848cd4fd82a8",
